@@ -1,54 +1,58 @@
 // 1 дз 1 задание
 
-var garden = 10 * 100; // узнаем площадь сада в метрах
-var gryadka = 15 * 25; // узнаем текущую занятую площадь грядками
+let garden = 10 * 100; // узнаем площадь сада в метрах
+let gryadka = 15 * 25; // узнаем текущую занятую площадь грядками
 
-var difference = garden - gryadka; //отнимем от всей площади занятую площадь
+let difference = garden - gryadka; //отнимем от всей площади занятую площадь
 console.log('Осталось незанято ' + difference + ' метров');
 
 // 1 дз 2 задание
 
-var dmAreaCircle = 15; /*- площадь овала в дм*/
+let dmAreaCircle = 15; /*- площадь овала в дм*/
 
-var smAreaCircle = dmAreaCircle * 100; /*- площадь овала в см*/
+let smAreaCircle = dmAreaCircle * 100; /*- площадь овала в см*/
 
-var smCutCircle = 600; /*- вырезанный овал в см*/
+let smCutCircle = 600; /*- вырезанный овал в см*/
 
-var smAreaEllipse = smAreaCircle - smCutCircle; /*- итоговая площадь овального кольца*/
+let smAreaEllipse = smAreaCircle - smCutCircle; /*- итоговая площадь овального кольца*/
 
 console.log('Итоговая площадь овального кольца равна ' + smAreaEllipse); 
 
 // 1 дз 3 задание
 
-var a = prompt('Введите число a');
+let a = parseFloat(prompt('Введите число a'));
 
-var b = prompt('Введите число b');
+let b = parseFloat(prompt('Введите число b'));
 
-var c = prompt('Введите число c');
+let c = parseFloat(prompt('Введите число c'));
 
 if (a < b && a < c) {
 	alert('Самое маленькое число это ' + a);
 } else if (b < a && b < c) {
 	alert('Самое маленькое число это ' + b);
-} else {
+} else if (c < a && c < b) {
 	alert('Самое маленькое число это ' + c);
+} else {
+	alert('Введенное значение некорректное');
 }
+ 
 
 // 1 дз 4 задание
-
-var number = 10;
-
-var n = prompt('Выберите число n');
-
-var m = prompt('Выберите число m и посмотрите ближайшее число в консоли ');
-
-
-var num1 = Math.abs(number - n); 
 	
-var num2 = Math.abs(number - m);
+let number = 10;
+
+let n = prompt('Выберите число n');
+
+let m = prompt('Выберите число m и посмотрите ближайшее число в консоли ');
+
+
+let num1 = Math.abs(number - n); 
+	
+let num2 = Math.abs(number - m);
 
 if (num1 < num2) {
 	console.log('Ближайшее число это ' + n);
 } else {
 	console.log('Ближайшее число это ' + m);
 }
+
