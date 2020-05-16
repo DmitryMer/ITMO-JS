@@ -25,7 +25,7 @@ var table = document.createElement('table');
 for (let i = 0; i < 3; i ++ ) {
 	var tr = document.createElement('tr');
 	for (j = 0; j < 3; j++) {
-		var tr = document.createElement('td');
+		var td = document.createElement('td');
 		tr.appendChild(td);
 	}
 	table.appendChild(tr); 
@@ -80,11 +80,13 @@ console.log(arr);
 //  3 ДЗ 4 Задание
 
 
-let str = [];
+
 let result = [];
+let str = [];
 
 for (let i = 1; i <= 999999; i ++) {
   var numStr = i.toString();
+  
   while (numStr.length != 6 ) {
     numStr = '0' + numStr;
   }
@@ -92,19 +94,18 @@ for (let i = 1; i <= 999999; i ++) {
   str.push(numStr);
 
   if (Lucky(i)) {
-		result.push(i);
-	}
+    result.push(i);
+  }
 }
 
 function Lucky(num) {
-	let str = String(num);
-	
-	let sum1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
-	let sum2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
-	
-	return sum1 == sum2;
-}	
+  let str = String(num);
+  
+  let sum1 = Number(numStr[0]) + Number(numStr[1]) + Number(numStr[2]);
+  let sum2 = Number(numStr[3]) + Number(numStr[4]) + Number(numStr[5]);
+  
+  return sum1 == sum2;
+}
 
 console.log(result.length);
-
 
