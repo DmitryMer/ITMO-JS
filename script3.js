@@ -84,7 +84,7 @@ console.log(arr);
 let result = [];
 let str = [];
 
-for (let i = 1; i <= 999999; i ++) {
+for (let i = 0; i <= 999999; i ++) {
   var numStr = i.toString();
   
   while (numStr.length != 6 ) {
