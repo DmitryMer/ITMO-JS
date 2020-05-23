@@ -17,36 +17,28 @@ C2.push(A);
 
 // 3 ДЗ 2 Задание
 
-let area = [ 1, null, 0, null, 1, null, null, null, null ];
+let area = [ 1, null, 0, null, 1, null, 0, null, 1 ];
 
-var table = document.createElement('table');
-
-
-for (let i = 0; i < 3; i ++ ) {
-	var tr = document.createElement('tr');
-	for (j = 0; j < 3; j++) {
-		var td = document.createElement('td');
-		tr.appendChild(td);
-	}
-	table.appendChild(tr); 
-}	
-
+let table = '';
 
 for (let i = 0; i < area.length; i ++) {
 	if (area[i] === 0 ) {
-		td[i].innerHtml = '0';
+		area[i] = '0';
 	} else if (area[i] === 1) {
-		td[i].innerHtml = 'X';
-	} else (area[i] === null) {
-		td[i].innerHtml = '';
+		area[i] = 'X';
+	} else if (area[i] === null) {
+		area[i] = '';
 	}
 }
 
+table +='<table>' +'<tr><td>'+ `${area[0]}` +'</td><td>'+ `${area[1]}` +'</td><td>'+ `${area[2]}` +'</td></tr>';
+table +='<tr><td>'+ `${area[3]}` +'</td><td>'+ `${area[4]}` +'</td><td>'+ `${area[5]}` +'</td></tr>';
+table +='<tr><td>'+ `${area[6]}` +'</td><td>'+ `${area[7]}` +'</td><td>'+ `${area[8]}` +'</td></tr>' + '</table>';
 
+document.write(table);
 
 
 //  3 ДЗ 3 Задание
-
 
 let arr = [12,4,3,10,1,20];
 
@@ -80,11 +72,10 @@ console.log(arr);
 //  3 ДЗ 4 Задание
 
 
-
 let result = [];
 let str = [];
 
-for (let i = 0; i <= 999999; i ++) {
+for (let i = 1; i <= 999999; i ++) {
   var numStr = i.toString();
   
   while (numStr.length != 6 ) {
