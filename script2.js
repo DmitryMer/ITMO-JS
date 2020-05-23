@@ -93,9 +93,9 @@ let year = +prompt('Введите год');
 if (year % 4 === 0) {
 	if (year % 100 === 0) {
 		if (year % 400 === 0) {
-				alert('Этот год високосный')
+			alert('Этот год високосный')
 			} else {
-				alert('Этот год обычный')
+			alert('Этот год обычный')
 			}
 	} else {
 		alert('Этот год високосный');
@@ -110,17 +110,19 @@ if (year % 4 === 0) {
 let plate = +prompt('Введите кол-во тарелок'); // тарелки
 let soap = +prompt('Введите кол-во моющего средства'); // моющее средство
 
-while (plate > 0) {
+while (plate >= 0) {
 	alert('Осталось тарелок : ' + plate);
 	alert('Осталось моющего средства : ' + (soap - 0.5));
-	plate --;	
-	soap -= 0.5;
 
-	if (soap <= 0 || plate <= 0 ) break; 
+	if (soap >= 0.5) {
+		plate --;	
+		soap -= 0.5;
+	} else {
+		break;
+	}
 } 
 
 alert('Итого: осталось тарелок : ' + plate);
 alert('Итого: осталось моющего средства : ' + soap);
-
 
 
