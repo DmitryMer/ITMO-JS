@@ -2,9 +2,12 @@ function zeroFormat(num) {
 	if (num >=0 && num <=9) {
  		return '0' + num;
  	} else {
- 		return num;
+ 		return num ;
  	}
 }
+
+let clock = document.getElementById('date_times');
+clock.style.display = 'flex';
 
 
 function dateTime() {
@@ -18,13 +21,12 @@ function dateTime() {
 	document.getElementById('minutes').innerHTML = minutes;
 	document.getElementById('seconds').innerHTML = seconds;
 
-
 	let colorHours = document.getElementById('hours');
-	colorHours.innerHTML = hours;
+	colorHours.innerHTML = hours + ':';
 	colorHours.style.color = 'red';
 
 	let colorMinutes = document.getElementById('minutes');
-	colorMinutes.innerHTML = minutes;
+	colorMinutes.innerHTML = minutes + ':';
 	colorMinutes.style.color = 'blue';
 
 	let colorSeconds = document.getElementById('seconds');
