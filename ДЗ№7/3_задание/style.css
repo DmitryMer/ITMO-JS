@@ -1,0 +1,37 @@
+body {
+	background-color: lightblue;
+}
+
+.traffic_lights {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 250px auto 0;
+	width: 70px;
+	height: 200px;
+	background-color: gray;  
+
+	border-radius: 20px;
+	border: 1px solid black;
+}
+
+.circle {
+	width: 40px;
+	height: 40px;
+	margin: 10px 15px 15px 15px;
+	border-radius: 100%;
+
+	background-color: black;
+}
+
+.red {
+	background-color: red;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.green {
+	background-color: #18a12f;
+}
