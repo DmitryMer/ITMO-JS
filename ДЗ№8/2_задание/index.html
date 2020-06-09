@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+		button {
+			outline: none;
+		 	cursor: pointer;
+		 	user-select: none;
+		}
+
+		#btn {
+			width: 50px;
+		 	height: 50px;
+		 	background-color: orange;
+		 	border-radius: 2em;
+		 }		 	
+
+		#cancel {
+		 	border-radius: 1em;
+		 	color: red;
+		 }
+
+	</style>
+</head>
+<body>
+	<button id='btn'>0</button>
+	<button id='cancel'>сбросить значение</button>
+	<script>
+		let btn = document.getElementById('btn');
+
+		let btnCancel = document.getElementById('cancel');
+
+		let count = 1;
+
+		btn.onclick = function() {
+			this.textContent = count;
+			count ++;
+		};
+
+		btnCancel.onclick = function() {
+			btn.textContent = 0;
+			count = 1;
+		};
+		
+ 	</script>
+	
+</body>
+</html>
