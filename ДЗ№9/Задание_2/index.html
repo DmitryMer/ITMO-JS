@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="graphic"></div>
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+	<script>
+		let line1 = {
+			x: [],
+ 			y: [],
+  			type: 'scatter',
+  			line: {color: 'firebrick'}
+			};
+			
+			function calcY(x){
+				let y;
+				if (x >= 1){
+					y = 5 / x;
+				} else {
+					y = x * x - 4 * x;
+				}
+				return y;
+			}
+			
+			for (let i = -5; i <= 5; i += 0.01){
+				line1.x.push(i);
+				line1.y.push(calcY(i));
+			}
+			
+			let data = [line1];
+			
+			let layout = {
+				title: 'График для домашней работы',
+				titlefont: {
+						color: 'rgb(100,10,255)',
+						size: 20,
+					},
+				xaxis: {
+					title: 'Ось X',
+				},
+				yaxis:{
+					title: 'Ось Y',
+				}
+			}
+			
+			Plotly.newPlot('graphic', data, layout);
+	</script>
+	
+</body>
+</html>
