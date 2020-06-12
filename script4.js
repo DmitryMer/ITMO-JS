@@ -24,7 +24,7 @@ function checkPass() {
 	let regLow = /[a-z]/g;
 	let regUp = /[A-Z]/g;
 	let regUpLow = /[a-zA-Z]/g;
-	let regDigit = /\d{3}/;
+	let regDigit = /\d{2,}/;
 	let regSymb =  /[!,$,#,%]/g;
 
 	(pass.length < 9) ? alert('Длина пароля должна быть от 9 символов') :
